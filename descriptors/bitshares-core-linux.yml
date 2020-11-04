@@ -20,7 +20,7 @@ packages:
 - openssl
 - pkgconf
 remotes:
-- url: https://github.com/bitshares/bitshares-core.git
+- url: git@github.com:mvs-org/dna-core.git
   dir: bitshares
 files:
 - supplement.tar.gz
