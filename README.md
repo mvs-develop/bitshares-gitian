@@ -53,11 +53,11 @@ The resulting file `MacOSX10.14.sdk.tar.xz` must be put in the `vendor/gitian-bu
 
 `dockerd` must be running and the current user must have sufficient privileges to use it.
 
-#### Check out bitshares-gitian
+#### Check out dna-gitian
 
 ```
-git clone https://github.com/bitshares/bitshares-gitian.git
-cd bitshares-gitian
+git clone https://github.com/mvs-org/dna-gitian.git
+cd dna-gitian
 git submodule update --init --recursive
 ```
 
@@ -116,21 +116,21 @@ Example: verify version 3.1.0:
 
 ### Use binary
 
-A `bz2` file(`bitshares-3.1.0-linux-amd64-bin.tar.bz2`) will be generated at `bitshares-gitian/vendor/gitian-builder/build/out/`  after any `./run-gitan -b` is executed.
+A `bz2` file(`dna-3.1.0-linux-amd64-bin.tar.bz2`) will be generated at `dna-gitian/vendor/gitian-builder/build/out/`  after any `./run-gitan -b` is executed.
 
 Example: use built witness_node binary: 
 
 ```
 cd vendor/gitian-builder/build/out/
-tar xvfj bitshares-3.1.0-linux-amd64-bin.tar.bz2
-./bitshares-core-3.1.0-linux-amd64-bin/witness_node
+tar xvfj dna-3.1.0-linux-amd64-bin.tar.bz2
+./dna-core-3.1.0-linux-amd64-bin/witness_node
 ```
 
 ## Repository branches
 
 From time to time it may become necessary to update the build descriptors, e. g. to update dependencies, or for other improvements.
 Such changes are likely to lead to different build results, which would invalidate existing signatures.
-Also, if a new version of bitshares-core makes such changes necessary, the change might break the build for older versions.
+Also, if a new version of dna-core makes such changes necessary, the change might break the build for older versions.
 
 The plan for such breaking changes is:
 
@@ -140,7 +140,7 @@ The plan for such breaking changes is:
 
 ### Existing branches
 
-* [3.3.1](https://github.com/bitshares/bitshares-gitian/tree/3.3.1)
+* [3.3.1](https://github.com/dna/dna-gitian/tree/3.3.1)
 
 ## Further Reading
 
